@@ -26,8 +26,33 @@ https://atcoder.jp/contests/abc086/tasks/arc089_a
 
 # 解答
 # <a id="ABC086A">ABC086A</a>
+```cs
+static void Main()
+{
+    var input = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+    if (IsEven(input[0], input[1]))
+        Console.WriteLine("Even");
+    else
+        Console.WriteLine("Odd");
+}
+
+static bool IsEven(int a, int b)
+{
+    return a * b % 2 == 0;
+}
+```
+
 
 # <a id="ABC081A">ABC081A</a>
+```cs
+static void Main()
+{
+    var input = Console.ReadLine();
+    var ans = input.Where(x => x == '1').Count();
+    Console.WriteLine(ans);
+}
+```
+
 # <a id="ABC081B">ABC081B</a>
 # <a id="ABC087B">ABC087B</a>
 # <a id="ABC083B">ABC083B</a>
