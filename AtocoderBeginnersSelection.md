@@ -132,6 +132,7 @@ static int GetSumDigit(int x)
 ```
 
 ```cs
+// LINQ使用
 static void Main(string[] args)
 {
     var array = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
@@ -158,6 +159,16 @@ static bool CheckSumDigit(int x, int a, int b)
 
 # <a id="ABC088B">ABC088B</a>
 ```cs
+static void Main()
+{
+    int N = int.Parse(Console.ReadLine());
+    var a = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+    Array.Sort(a);
+    Array.Reverse(a);
+    var alicePoint = a.Where((_, index) => index % 2 == 0).Sum();
+    var bobPoint = a.Where((_, index) => index % 2 != 0).Sum();
+    Console.WriteLine(alicePoint - bobPoint);
+}
 ```
 # <a id="ABC085B">ABC085B</a>
 ```cs
