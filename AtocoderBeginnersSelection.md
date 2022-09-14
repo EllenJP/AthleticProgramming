@@ -171,4 +171,3 @@ static bool CheckSumDigit(int x, int a, int b)
 # <a id="ABC086C">ABC086C</a>
 ```cs
 ```
-
